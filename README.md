@@ -1,7 +1,17 @@
 # Coursera Dump
 
-[TODO. There will be project description]
+Скрипт собирает информацию о случайных 20-ти курсах на Курсере и
+выгружает ее в xlsx-файл. 
 
-# Project Goals
+Установка :
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+    Скрипт требует для своей работы установленный интерпретатор Python версии выше 3.3
+    а также некоторые дополнительные модули, которые можно установить следующим образом:
+    
+    pip install -r requirements.txt
+
+Запуск :
+
+    python coursera.py 
+    скрипт попросит ввести имя под которым будет сохранен результат работы. Пример : courser.xlsx
+  
