@@ -39,8 +39,8 @@ def get_course_info(course_slug):
 
 
 def get_starts(soup):
-    data = soup.find(class_='startdate rc-StartDateString caption-text').text
-    return data
+    start_date = soup.find(class_='startdate rc-StartDateString caption-text').text
+    return start_date
     
 
 def get_rating(soup):
