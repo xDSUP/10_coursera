@@ -1,34 +1,6 @@
 import requests
 import re
 import argparse
-import sys
-
-from random import sample
-from io import BytesIO
-from lxml import etree
-from bs4 import BeautifulSoup
-from openpyxl import Workbook
-
-
-def get_courses_list_html():
-    website_address = "https://www.coursera.org/sitemap~www~courses.xml"
-    return requests.get(website_address).content
-    
-
-def get_random_courses(html, courses_count=20):
-    tree = etree.parse(BytesIO(html))
-    root = tree.getroot()
-    courses_urls = sample([url[0].text for url in root], courses_count)
-    
-    courses_list = []
-    for url in courses_urls:
-        course = get_course_info(get_course_html(url),url)
-        if course is not None:
-            courses_list.append(course)
-    return courses_list
-import requests
-import re
-import argparse
 
 from random import sample
 from io import BytesIO
